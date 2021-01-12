@@ -1,7 +1,7 @@
 package orchestration
 
 import (
-	"github.com/f5devcentral/f5-ipam-controller/pkg/ipamspec"
+	"github.com/f5devcentral/testipam/pkg/ipamspec"
 )
 
 type Orchestrator interface {

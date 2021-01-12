@@ -60,18 +60,18 @@ RUN set -ex && \
 # Copy Source code
 COPY ./$REPO_NAME $BASE_PATH
 
-RUN /bin/bash -ex $WORKDIR/f5-ipam-controller/build-tools/rel-build.sh
+RUN /bin/bash -ex $WORKDIR/testipam/build-tools/rel-build.sh
 
 
 FROM registry.redhat.io/ubi7/ubi-minimal as final
 
-LABEL name="f5networks/f5-ipam-controller" \
+LABEL name="f5networks/testipam" \
       vendor="F5 Networks" \
       # version - should be passed in via docker build
-      url="http://clouddocs.f5.com/products/connectors/f5-ipam-controller/latest/" \
+      url="http://clouddocs.f5.com/products/connectors/testipam/latest/" \
       summary="F5 BIG-IP Controller for Kubernetes" \
       description="Manages F5 BIG-IP from Kubernetes" \
-      run='docker run --name ${NAME} ${IMAGE} /app/bin/f5-ipam-controller' \
+      run='docker run --name ${NAME} ${IMAGE} /app/bin/testipam' \
       io.k8s.description="Manages F5 BIG-IP from Kubernetes" \
       io.k8s.display-name="F5 BIG-IP Controller for Kubernetes" \
       io.openshift.expose-services="" \
@@ -102,9 +102,9 @@ RUN microdnf --enablerepo=rhel-7-server-rpms --enablerepo=rhel-7-server-optional
     && echo "{\"version\": \"${VERSION_INFO}\", \"build\": \"${BUILD_INFO}\"}" \
           > $APPPATH/VERSION_BUILD.json
 
-COPY --from=rhel-builder "/go/out/bin/f5-ipam-controller" $APPPATH/bin
+COPY --from=rhel-builder "/go/out/bin/testipam" $APPPATH/bin
 
 USER ctlr
 
 # Run the run application in the projects bin directory.
-CMD [ "/app/bin/f5-ipam-controller" ]
+CMD [ "/app/bin/testipam" ]

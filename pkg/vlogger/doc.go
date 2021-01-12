@@ -118,8 +118,8 @@ to the console:
   package main
 
   import (
-    log  "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
-    "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger/console"
+    log  "github.com/f5devcentral/testipam/pkg/vlogger"
+    "github.com/f5devcentral/testipam/pkg/vlogger/console"
 
   func init() {
     // Log all messages to the user's console

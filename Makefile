@@ -1,4 +1,4 @@
-PACKAGE  := github.com/f5devcentral/f5-ipam-controller
+PACKAGE  := github.com/f5devcentral/testipam
 
 BASE     := $(GOPATH)/src/$(PACKAGE)
 GOOS     = $(shell go env GOOS)
@@ -28,8 +28,8 @@ verify: fmt vet
 docs: _docs
 
 clean:
-	docker rmi f5-ipam-controller-devel || true
-	docker rmi f5-ipam-controller-debug || true
+	docker rmi testipam-devel || true
+	docker rmi testipam-debug || true
 	@echo "Did not clean local go workspace"
 
 info:

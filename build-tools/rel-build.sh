@@ -32,7 +32,7 @@ fi
 
 if $LICENSE; then
   # Licensee need this path to generate attributions
-  vendor_dir="$CURDIR/../../f5-ipam-controller/vendor"
+  vendor_dir="$CURDIR/../../testipam/vendor"
   . $CURDIR/attributions-generator.sh
   # Run the attributions and save the content to a local file.
   generate_attributions_licensee $vendor_dir > /go/out/bin/all_attributions.txt

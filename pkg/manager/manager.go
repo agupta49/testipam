@@ -1,6 +1,6 @@
 package manager
 
-import log "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
+import log "github.com/f5devcentral/testipam/pkg/vlogger"
 
 // Manager defines the interface that the IPAM system should implement
 type Manager interface {

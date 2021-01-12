@@ -2,18 +2,19 @@ package main
 
 import (
 	"fmt"
-	"golang.org/x/crypto/ssh/terminal"
 	"os"
 	"os/signal"
 	"strings"
 	"syscall"
 
+	"golang.org/x/crypto/ssh/terminal"
+
+	"github.com/f5devcentral/testipam/pkg/controller"
+	"github.com/f5devcentral/testipam/pkg/manager"
+	"github.com/f5devcentral/testipam/pkg/orchestration"
+	log "github.com/f5devcentral/testipam/pkg/vlogger"
+	clog "github.com/f5devcentral/testipam/pkg/vlogger/console"
 	flag "github.com/spf13/pflag"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/controller"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/manager"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/orchestration"
-	log "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
-	clog "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger/console"
 )
 
 const (

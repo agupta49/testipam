@@ -1,14 +1,15 @@
 package orchestration
 
 import (
-	ficV1 "github.com/f5devcentral/f5-ipam-controller/pkg/ipamapis/apis/fic/v1"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/ipammachinery"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/ipamspec"
-	"k8s.io/client-go/rest"
-	"k8s.io/client-go/tools/cache"
 	"time"
 
-	log "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
+	ficV1 "github.com/f5devcentral/testipam/pkg/ipamapis/apis/fic/v1"
+	"github.com/f5devcentral/testipam/pkg/ipammachinery"
+	"github.com/f5devcentral/testipam/pkg/ipamspec"
+	"k8s.io/client-go/rest"
+	"k8s.io/client-go/tools/cache"
+
+	log "github.com/f5devcentral/testipam/pkg/vlogger"
 
 	"k8s.io/apimachinery/pkg/util/wait"
 
