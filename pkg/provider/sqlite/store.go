@@ -3,8 +3,9 @@ package sqlite
 import (
 	"database/sql"
 	"fmt"
+
+	log "github.com/f5devcentral/testipam/pkg/vlogger"
 	_ "github.com/mattn/go-sqlite3"
-	log "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
 )
 
 type DBStore struct {

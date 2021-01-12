@@ -1,10 +1,10 @@
 package controller
 
 import (
-	"github.com/f5devcentral/f5-ipam-controller/pkg/ipamspec"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/manager"
-	"github.com/f5devcentral/f5-ipam-controller/pkg/orchestration"
-	log "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
+	"github.com/f5devcentral/testipam/pkg/ipamspec"
+	"github.com/f5devcentral/testipam/pkg/manager"
+	"github.com/f5devcentral/testipam/pkg/orchestration"
+	log "github.com/f5devcentral/testipam/pkg/vlogger"
 )
 
 type Spec struct {

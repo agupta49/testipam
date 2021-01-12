@@ -5,8 +5,8 @@ import (
 	"net"
 	"strings"
 
-	"github.com/f5devcentral/f5-ipam-controller/pkg/provider/sqlite"
-	log "github.com/f5devcentral/f5-ipam-controller/pkg/vlogger"
+	"github.com/f5devcentral/testipam/pkg/provider/sqlite"
+	log "github.com/f5devcentral/testipam/pkg/vlogger"
 )
 
 const (
